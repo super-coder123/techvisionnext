@@ -8,6 +8,7 @@ import {
   Youtube,
   Linkedin,
   Instagram,
+  MapPin,
 } from "lucide-react";
 import Logo from "./Logo";
 
@@ -48,6 +49,11 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
             </div>
+
+            <p className="flex items-center gap-2 mt-10">
+              <MapPin className="w-4 h-4" />
+              MUZAFFARPUR, BIHAR, INDIA
+            </p>
           </div>
 
           {/* COMPANY */}
@@ -108,6 +114,8 @@ export default function Footer() {
             is provided for general informational purposes only and should not be
             considered professional advice.
           </p>
+
+          
         </div>
 
         {/* BOTTOM BAR */}
