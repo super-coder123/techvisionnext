@@ -14,6 +14,16 @@ interface MenuItem {
 
 const menuData: MenuItem[] = [
   {
+    title: "IT Services",
+    children: [
+      { title: "Website Development", path: "/services/website-development" },
+      { title: "Mobile App Development", path: "/services/mobile-app-development" },  
+      { title: "E-commerce Development", path: "/services/e-commerce-development" },
+      { title: "Software Development", path: "/services/software-development" },
+      { title: "UI/UX Design", path: "/services/ui-ux-design" },
+    ],
+  },
+  {
     title: "Registrations & Licenses",
     children: [
       {
@@ -131,16 +141,7 @@ const menuData: MenuItem[] = [
     ],
   },
 
-  {
-    title: "IT Services",
-    children: [
-      { title: "Website Development", path: "/services/website-development" },
-      { title: "Mobile App Development", path: "/services/mobile-app-development" },  
-      { title: "E-commerce Development", path: "/services/e-commerce-development" },
-      { title: "Software Development", path: "/services/software-development" },
-      { title: "UI/UX Design", path: "/services/ui-ux-design" },
-    ],
-  },
+  
 
   
 ];

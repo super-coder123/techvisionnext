@@ -39,7 +39,7 @@ export default function WorkingProcess() {
         </h2>
 
         <p className="text-gray-600 max-w-3xl mx-auto mb-16 text-lg">
-          Seeking legal help is a breeze with VakilKaro. Just a few clicks
+          Seeking legal help is a breeze with Techvision. Just a few clicks
           stand between you and expert guidance. Your solution is just a click away!
         </p>
 

@@ -32,19 +32,19 @@ export default function Footer() {
 
             {/* SOCIALS */}
             <div className="flex gap-4">
-              <a href="#" target="_blank" className="hover:text-white transition">
+              <a href="https://www.facebook.com/share/17bnZTPY6d/" target="_blank" className="hover:text-white transition">
                 <Facebook size={20} />
               </a>
-              <a href="#" target="_blank" className="hover:text-white transition">
+              {/* <a href="#" target="_blank" className="hover:text-white transition">
                 <Twitter size={20} />
-              </a>
-              <a href="#" target="_blank" className="hover:text-white transition">
+              </a> */}
+              <a href="https://youtube.com/@techvision-emitting-technology?si=Xzrt5-oNPKnILswI" target="_blank" className="hover:text-white transition">
                 <Youtube size={20} />
               </a>
-              <a href="#" target="_blank" className="hover:text-white transition">
+              <a href="https://www.linkedin.com/company/tech-vision-emitting-technology/" target="_blank" className="hover:text-white transition">
                 <Linkedin size={20} />
               </a>
-              <a href="#" target="_blank" className="hover:text-white transition">
+              <a href="https://www.instagram.com/techvisionpay?igsh=MW90eXEwN254bTZ5bw==" target="_blank" className="hover:text-white transition">
                 <Instagram size={20} />
               </a>
             </div>

@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
           {/* LEFT COLUMN */}
           <div>
             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-              Choose Vakilkaro for unparalleled legal expertise and personalized
+              Choose Techvision for unparalleled legal expertise and personalized
               service, ensuring your business navigates the legal landscape with
               confidence and success.
             </p>
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+919828123489"
+                  href="tel:+919031675840"
                   target="_blank"
                   className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition"
                 >
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
                 </a>
 
                 <a
-                  href="https://wa.me/9166901305"
+                  href="https://wa.me/9031675840"
                   target="_blank"
                   className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition"
                 >
