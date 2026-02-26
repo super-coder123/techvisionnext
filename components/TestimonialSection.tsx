@@ -36,6 +36,7 @@ const testimonials = [
   },
 ];
 
+
 export default function TestimonialSection() {
   const [current, setCurrent] = useState(0);
 
@@ -45,23 +46,30 @@ export default function TestimonialSection() {
         prev === testimonials.length - 1 ? 0 : prev + 1
       );
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="py-24 bg-gray-50 text-gray-900">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section 
+      className="relative py-32 bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{ 
+        // Using a professional business/tech background from Unsplash
+        backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000')` 
+      }}
+    >
+      {/* Dark Overlay to make text readable */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
 
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-16">
+      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-white drop-shadow-md">
           What Our Customers Say
         </h2>
 
         <div className="relative overflow-hidden">
-
           {/* Slider Wrapper */}
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform duration-700 ease-in-out"
             style={{
               transform: `translateX(-${current * 100}%)`,
             }}
@@ -71,22 +79,18 @@ export default function TestimonialSection() {
                 key={index}
                 className="min-w-full px-6"
               >
-                <div className="bg-white p-10 rounded-2xl shadow-xl">
-
-                  <h3 className="text-xl font-semibold mb-6">
+                {/* Glassmorphism Card */}
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-3xl shadow-2xl">
+                  
+                  <h3 className="text-2xl font-bold mb-6 text-white">
                     {item.name}
                   </h3>
 
                   <div className="flex justify-center mb-6">
-                    <Image
-                      src="/comma.png"
-                      alt="Quote"
-                      width={40}
-                      height={40}
-                    />
+                    <span className="text-6xl text-orange-400 font-serif leading-none">“</span>
                   </div>
 
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-100 text-lg leading-relaxed italic">
                     {item.content}
                   </p>
 
@@ -97,15 +101,15 @@ export default function TestimonialSection() {
         </div>
 
         {/* Dots Navigation */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-3 mt-10">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full transition ${
+              className={`h-1.5 rounded-full transition-all duration-500 ${
                 current === index
-                  ? "bg-black scale-125"
-                  : "bg-gray-300"
+                  ? "w-10 bg-orange-500"
+                  : "bg-white/30 hover:bg-white/50"
               }`}
             />
           ))}

@@ -69,7 +69,7 @@ export default function ConsultationSection() {
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-4 text-lg  text-gray-900 font-semibold">
                 <Phone className="text-blue-600" size={22} />
-                +91 9898912348
+                +91 9031675840
               </div>
 
               <div className="flex items-center gap-4 text-lg  text-gray-900 font-semibold">

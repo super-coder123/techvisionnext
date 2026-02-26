@@ -60,154 +60,96 @@ const itServicesData = [
 ];
 
 export default function ServicesSection() {
+  
+  const GlowWrapper = ({ children }: { children: React.ReactNode }) => (
+    <div className="group relative overflow-hidden rounded-2xl bg-white/40 p-[2px] transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm border border-white/60 shadow-sm hover:shadow-2xl">
+      {/* 1. THE RGBY GLOW LAYER */}
+      <div 
+        className="animate-border-spin absolute inset-[-1000%] 
+        bg-[conic-gradient(from_90deg_at_50%_50%,transparent_10%,#EF4444_25%,#22C55E_40%,#3B82F6_55%,#FACC15_70%,transparent_90%)] 
+        opacity-0 transition-opacity duration-500 group-hover:opacity-100" 
+      />
+
+      {/* 2. THE LIGHT GLASS CONTENT MASK */}
+      <div className="relative h-full w-full rounded-[14px] bg-white/90 backdrop-blur-md">
+        {children}
+      </div>
+    </div>
+  );
+
+  const ServiceCardContent = ({ service }: { service: any }) => (
+    <div className="p-7 text-center flex flex-col h-full relative z-10">
+      {/* ICON */}
+      <div className={`mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full 
+                      bg-gradient-to-r ${service.color} text-white text-4xl 
+                      transition-transform duration-500 group-hover:scale-110 shadow-md`}>
+        {service.icon}
+      </div>
+
+      {/* TITLE */}
+      <h3 className="font-bold text-gray-800 text-lg mb-6 min-h-[60px]">
+        {service.title}
+      </h3>
+
+      {/* BUTTON */}
+      <button className="mt-auto w-full py-3 rounded-lg font-semibold text-white 
+                        bg-gray-900 hover:bg-orange-500
+                        transition-all duration-300 shadow-sm">
+        GET STARTED
+      </button>
+    </div>
+  );
+
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
-      
-      <div className="max-w-7xl mx-auto px-6">
+    <section 
+      className="relative py-24 bg-fixed bg-cover bg-center bg-no-repeat overflow-hidden"
+      style={{ 
+        // Using a bright, airy architectural background for Light Mode
+        backgroundImage: `url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000')` 
+      }}
+    >
+      {/* Light Overlay (White tint) to keep it bright but legible */}
+      <div className="absolute inset-0 bg-white/60 z-0"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         
-        <h2 className="text-4xl font-extrabold mb-14  text-gray-900">
-          IT Services
-        </h2>
+        {/* IT Services Section */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-extrabold mb-14 text-gray-900 drop-shadow-sm">IT Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+            {itServicesData.map((service, index) => (
+              <GlowWrapper key={index}>
+                <ServiceCardContent service={service} />
+              </GlowWrapper>
+            ))}
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-          
-          {itServicesData.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-gray-300 rounded-2xl p-7 text-center border border-gray-200
-                        shadow-sm hover:shadow-2xl hover:-translate-y-2
-                        transition-all duration-300
-                        flex flex-col h-full"   
-            >
-              
-              {/* ICON */}
-              <div
-                className={`mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full 
-                            bg-gradient-to-r ${service.color} text-white text-4xl
-                            group-hover:scale-110 transition`}
-              >
-                {service.icon}
-              </div>
+        {/* Registration & Licenses Section */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-extrabold mb-14 text-gray-900 drop-shadow-sm">Registration & Licenses</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+            {servicesData.map((service, index) => (
+              <GlowWrapper key={index}>
+                <ServiceCardContent service={service} />
+              </GlowWrapper>
+            ))}
+          </div>
+        </div>
 
-              {/* TITLE (Fixed Height Area) */}
-              <h3 className="font-bold text-gray-900 text-lg mb-6 min-h-[60px]">
-                {service.title}
-              </h3>
-
-              {/* BUTTON pushed to bottom */}
-              <button
-                className="mt-auto w-full py-3 rounded-lg font-semibold text-white
-                          bg-gradient-to-r from-gray-800 to-gray-900
-                          hover:from-orange-500 hover:to-orange-600
-                          transition-all duration-300"
-              >
-                GET STARTED
-              </button>
-
-            </div>
-          ))}
-
+        {/* Legal Services Section */}
+        <div>
+          <h2 className="text-4xl font-extrabold mb-14 text-gray-900 drop-shadow-sm">Legal Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+            {legalServicesData.map((service, index) => (
+              <GlowWrapper key={index}>
+                <ServiceCardContent service={service} />
+              </GlowWrapper>
+            ))}
+          </div>
         </div>
 
       </div>
-      
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <h2 className="text-4xl font-extrabold mb-14 mt-20 text-gray-900">
-          Registration & Licenses
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          
-          {servicesData.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl p-7 text-center border border-gray-200
-                         shadow-sm hover:shadow-2xl hover:-translate-y-2
-                         transition-all duration-300
-                         flex flex-col h-full"   // ✅ IMPORTANT
-            >
-              
-              {/* ICON */}
-              <div
-                className={`mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full 
-                            bg-gradient-to-r ${service.color} text-white text-4xl
-                            group-hover:scale-110 transition`}
-              >
-                {service.icon}
-              </div>
-
-              {/* TITLE (Fixed Height Area) */}
-              <h3 className="font-bold text-gray-900 text-lg mb-6 min-h-[60px]">
-                {service.title}
-              </h3>
-
-              {/* BUTTON pushed to bottom */}
-              <button
-                className="mt-auto w-full py-3 rounded-lg font-semibold text-white
-                           bg-gradient-to-r from-gray-800 to-gray-900
-                           hover:from-orange-500 hover:to-orange-600
-                           transition-all duration-300"
-              >
-                GET STARTED
-              </button>
-
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <h2 className="text-4xl font-extrabold mb-14 mt-10 text-gray-900">
-          Legal Services
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-          
-          {legalServicesData.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-gray-300 rounded-2xl p-7 text-center border border-gray-200
-                         shadow-sm hover:shadow-2xl hover:-translate-y-2
-                         transition-all duration-300
-                         flex flex-col h-full"   
-            >
-              
-              {/* ICON */}
-              <div
-                className={`mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full 
-                            bg-gradient-to-r ${service.color} text-white text-4xl
-                            group-hover:scale-110 transition`}
-              >
-                {service.icon}
-              </div>
-
-              {/* TITLE (Fixed Height Area) */}
-              <h3 className="font-bold text-gray-900 text-lg mb-6 min-h-[60px]">
-                {service.title}
-              </h3>
-
-              {/* BUTTON pushed to bottom */}
-              <button
-                className="mt-auto w-full py-3 rounded-lg font-semibold text-white
-                           bg-gradient-to-r from-gray-800 to-gray-900
-                           hover:from-orange-500 hover:to-orange-600
-                           transition-all duration-300"
-              >
-                GET STARTED
-              </button>
-
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-
-   
     </section>
   );
 }
