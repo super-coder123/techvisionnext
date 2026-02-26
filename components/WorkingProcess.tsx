@@ -6,7 +6,7 @@ const processSteps = [
   {
     title: "Request a Quote",
     desc: "Fill out our consultation form. Our specialists will provide personalized advice for your legal needs.",
-    icon: "/process/work-1.png",
+    icon: "/work-1.png",
   },
   {
     title: "Document Submission",
