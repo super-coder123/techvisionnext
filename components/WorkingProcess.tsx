@@ -6,22 +6,22 @@ const processSteps = [
   {
     title: "Request a Quote",
     desc: "Fill out our consultation form. Our specialists will provide personalized advice for your legal needs.",
-    icon: "/work-1.png",
+    icon: "/process/Work-1.png",
   },
   {
     title: "Document Submission",
     desc: "Submit the necessary documents through our secure portal for swift and accurate legal processing.",
-    icon: "/process/work-2.png",
+    icon: "/process/Work-2.png",
   },
   {
     title: "Payment Processing",
     desc: "Experience seamless and secure payments through our reliable gateway for hassle-free transactions.",
-    icon: "/process/work-3.png",
+    icon: "/process/Work-3.png",
   },
   {
     title: "Receive your Work",
     desc: "Our team ensures timely completion and delivers legal documents as per deadlines.",
-    icon: "/process/work-4.png",
+    icon: "/process/Work-4.png",
   },
 ];
 

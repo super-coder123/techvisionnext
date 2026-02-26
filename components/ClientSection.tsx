@@ -88,10 +88,10 @@ const clientsData = [
 
 export default function ClientSection() {
   return (
-    <section className="bg-gradient-to-b from-slate-100 to-slate-200 py-24 overflow-hidden">
+    <section className="bg-gradient-to-b from-slate-100 to-slate-200 py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-wide text-gray-900">
+        <h2 className="text-xl md:text-5xl font-extrabold tracking-wide text-gray-900">
           WE ARE LOVED BY HUNDREDS CLIENTS
         </h2>
 
@@ -99,7 +99,7 @@ export default function ClientSection() {
 
         {/* CAROUSEL */}
         <div className="relative w-full overflow-hidden">
-          <div className="flex animate-scroll gap-20">
+          <div className="flex animate-scroll gap-15">
             {[...clientsData, ...clientsData].map((client, index) => (
               // <div
               //   key={index}
@@ -109,7 +109,7 @@ export default function ClientSection() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-20  object-contain grayscale opacity-70
+                  className="h-16  object-contain grayscale opacity-70
                              hover:grayscale-0 hover:opacity-100
                              hover:scale-110 transition-all duration-500"
                 />
