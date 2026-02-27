@@ -74,7 +74,7 @@ export default function ConsultationSection() {
 
               <div className="flex items-center gap-4 text-lg  text-gray-900 font-semibold">
                 <Mail className="text-green-600" size={22} />
-                help@techvision.co.in
+                support@visionpay.in
               </div>
             </div>
           </div>

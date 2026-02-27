@@ -547,6 +547,11 @@ export default function ServicePage({
                 </div>
                 <select className="w-full bg-slate-50 border-none p-4 rounded-2xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-slate-900 appearance-none">
                   <option>Select State</option>
+                  <option>Bihar</option>
+                  <option>Uttar Pradesh</option>
+                  <option>West Bengal</option>
+                  <option>Assam</option>
+                  <option>Madhya Pradesh</option>
                   <option>Maharashtra</option>
                   <option>Delhi</option>
                   <option>Karnataka</option>
@@ -561,7 +566,7 @@ export default function ServicePage({
       </section>
 
       {/* ================= STEP-BY-STEP PROCESS ================= */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">How it Works</h2>
           <p className="text-slate-500">Your journey from application to approval in 4 simple steps.</p>

@@ -500,6 +500,69 @@ export const serviceData: Record<string, ServiceContent> = {
     mainParagraph: "Our UI/UX design services focus on creating user-centered designs that enhance the overall user experience. We conduct thorough research and testing to ensure that your digital products are not only visually appealing but also easy to use.",
     benefits: ["Enhanced User Experience", "Increased User Engagement", "Higher Conversion Rates", "Brand Consistency"],
     faqs: [{ q: "Do you provide design for mobile apps?", a: "Yes, we offer UI/UX design services for both web and mobile applications." }]
+  },
+
+  "virtual-account-api": {
+    title: "Virtual Account API",
+    heroDescription: "Automate payment reconciliation with unique virtual accounts for every customer.",
+    features: ["Instant Acknowledgment", "Vanity Account Numbers", "NEFT/RTGS/IMPS Support", "Real-time Webhooks"],
+    docsRequired: ["Business PAN", "Certificate of Incorporation", "Authorized Signatory KYC"],
+    mainParagraph: "Our Virtual Account API allows businesses to create unique bank account numbers for each client or transaction. This eliminates the headache of manual reconciliation, as every incoming payment is automatically mapped to the correct user in your system.",
+    benefits: ["Auto-Reconciliation", "Faster Settlement", "Improved Cash Flow Tracking", "Scalable Operations"],
+    faqs: [
+      { q: "Can I create unlimited virtual accounts?", a: "Yes, our API supports the creation of unlimited accounts to match your user base." },
+      { q: "Which banks are supported?", a: "We partner with leading private banks like ICICI, HDFC, and Axis to provide stable virtual accounts." }
+    ]
+  },
+
+  "payment-gateway-api": {
+    title: "Payment Gateway API",
+    heroDescription: "Seamlessly accept payments via Credit Cards, Debit Cards, NetBanking, and UPI.",
+    features: ["100+ Payment Modes", "Seamless Checkout UX", "PCI-DSS Compliant", "Smart Routing"],
+    docsRequired: ["Website/App URL", "Business PAN Card", "Gst Registration", "Cancelled Cheque"],
+    mainParagraph: "Integrate a robust payment ecosystem into your application. Our Payment Gateway API ensures high success rates through smart routing technology and provides a secure, friction-less checkout experience for your customers.",
+    benefits: ["Highest Success Rates", "Secure Transactions", "Multi-Currency Support", "Instant Refunds Processing"],
+    faqs: [{ q: "What is the settlement cycle?", a: "Standard settlement is T+2 days, with options for instant settlement for eligible businesses." }]
+  },
+
+  "payout-api": {
+    title: "Payout API",
+    heroDescription: "Automate vendor payments, employee salaries, and customer refunds 24/7.",
+    features: ["Bulk Payout Support", "24/7 Processing", "Beneficiary Validation", "Low Transaction Fees"],
+    docsRequired: ["Board Resolution", "Authorized Signatory PAN", "Operational Bank Account Details"],
+    mainParagraph: "Move money instantly to any bank account, UPI ID, or wallet. Our Payout API is designed for businesses that need to make high-volume outgoing payments without manual bank portal uploads.",
+    benefits: ["Eliminate Manual Errors", "Instant Fund Transfers", "Automated Approval Workflows", "Detailed Transaction Logs"],
+    faqs: [{ q: "Is there a limit on payout amounts?", a: "Limits are customizable based on your business volume and risk profile." }]
+  },
+
+  "e-nach-api": {
+    title: "E-Nach API",
+    heroDescription: "Simplify recurring payments with digital mandate registration and automated debits.",
+    features: ["Aadhaar Based Auth", "NetBanking Validation", "Recurring Debit Automation", "NPCI Integrated"],
+    docsRequired: ["Utility Bill", "Business Registration", "Aadhaar of Director"],
+    mainParagraph: "E-Nach (Electronic National Automated Clearing House) allows you to set up standing instructions for recurring payments like EMIs, subscriptions, or SIPs digitally, replacing physical paperwork.",
+    benefits: ["Paperless Onboarding", "Higher Mandate Success", "Reduced Collection Costs", "Timely Payment Recovery"],
+    faqs: [{ q: "How long does mandate approval take?", a: "E-mandates are usually approved instantly or within 24 hours via Aadhaar/NetBanking." }]
+  },
+
+  "cibil-score-api": {
+    title: "CIBIL Score API",
+    heroDescription: "Access real-time credit reports and scores to make informed lending decisions.",
+    features: ["Direct Credit Bureau Access", "Real-time Score Fetching", "Detailed Credit History", "Risk Analysis Tools"],
+    docsRequired: ["Lending License (NBFC/Bank)", "Data Privacy Agreement", "Business KYC"],
+    mainParagraph: "Our CIBIL Score API provides instant access to credit information for individuals and businesses. Perfect for FinTechs, lenders, and insurance companies looking to assess creditworthiness on the fly.",
+    benefits: ["Instant Risk Assessment", "Fraud Prevention", "Data-Driven Decisions", "Seamless User Onboarding"],
+    faqs: [{ q: "Is user consent required?", a: "Yes, pulling a CIBIL score requires explicit digital consent from the user as per RBI guidelines." }]
+  },
+
+  "verification-api": {
+    title: "Verification API",
+    heroDescription: "Verify PAN, Aadhaar, GST, and Bank Accounts instantly with our KYC suite.",
+    features: ["OCR Capabilities", "Govt Database Sync", "Liveness Detection", "Bank Account Penny Drop"],
+    docsRequired: ["Service Agreement", "Developer Metadata", "Company KYC"],
+    mainParagraph: "Onboard users with confidence. Our Verification API suite connects directly to government databases to verify identities in seconds, ensuring your platform remains compliant and fraud-free.",
+    benefits: ["Reduced Fraud Risk", "Instant KYC Completion", "Regulatory Compliance", "Enhanced Trust"],
+    faqs: [{ q: "Does it support video KYC?", a: "Yes, we offer advanced modules for Video KYC and liveness detection." }]
   }
 
   };

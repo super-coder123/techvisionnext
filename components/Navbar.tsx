@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import Logo from "./Logo";
+import { title } from "process";
 
 interface MenuItem {
   title: string;
@@ -22,6 +23,18 @@ const menuData: MenuItem[] = [
       { title: "Software Development", path: "/services/software-development" },
       { title: "UI/UX Design", path: "/services/ui-ux-design" },
     ],
+    
+  },
+  { 
+    title: "API Services", 
+    children:[
+        {title: "Virtual Account API", path: "/services/virtual-account-api"},
+        {title: "Payment Gateway API", path: "/services/payment-gateway-api"},
+        {title: "Payout API", path: "/services/payout-api"},
+        {title: "E-Nach API", path: "/services/e-nach-api"},
+        {title: "CIBIL Score API", path: "/services/cibil-score-api"},
+        {title: "Verification API", path: "/verification-api"},
+      ]
   },
   {
     title: "Registrations & Licenses",

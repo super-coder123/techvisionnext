@@ -129,6 +129,29 @@ export default function Footer() {
             <Link href="/careers">Careers</Link>
           </div>
 
+          <div className="flex gap-2">
+             <img
+                  src="/certified/amex.png"
+                  alt="amex"
+                  className="h-10  object-contain"
+                />
+             <img
+                  src="/certified/startupindia.png"
+                  alt="startupindia"
+                  className="h-10  object-contain"
+                />
+            <img
+                src="/certified/comodo.png"
+                alt="comodo"
+                className="h-10  object-contain"
+              />
+            <img
+                src="/certified/duns.jpg"
+                alt="duns"
+                className="h-10  object-contain"
+              />
+          </div>
+
           <p className="text-center md:text-right">
             © {new Date().getFullYear()} TechVision. All rights reserved.
           </p>
