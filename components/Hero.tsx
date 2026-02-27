@@ -6,13 +6,13 @@ import Image from "next/image";
 const heroSlides = [
   {
     img: "/hero/photo-1.jpg",
-    title: "Legal mein kuch bhi karo",
-    highlight: "toh TechVision karo",
+    title: "Har Legal Kaam,",
+    highlight: " Ab Smart Tareeke Se.",
     desc: "Business Registration, Trademark, Taxation & Legal Compliance services in just a few clicks."
   },
   {
     img: "/hero/photo-2.jpg", // Suggested: Use an image of a developer or laptop
-    title: "Build Your Digital Presence",
+    title: "Empowering Your Digital Growth",
     highlight: "with TechVision IT",
     desc: "From Website Development to Custom Mobile Apps, we turn your business ideas into scalable digital products."
   },
